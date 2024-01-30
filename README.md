@@ -30,7 +30,7 @@ Daves Hot Chicken | Los Angeles, CA | Fried Chicken
 (https://cdn.vox-cdn.com/thumbor/dAS-CsWDnNdkh9XFVn7izEoaPPQ=/0x0:3780x3024/1200x800/filters:focal(1601x1338:2205x1942)/cdn.vox-cdn.com/uploads/chorus_image/image/67097709/unnamed_7.0.jpg)
 
 Crazy Rockin' Sushi | La Puente, CA | Japanese
-![Photo of Daves Hot chicken food](https://s3-media0.fl.yelpcdn.com/bphoto/fAIkXZo9TXk5EU6DKttHcg/348s.jpg)
+![Photo of Daves Hot chicken food](https://cdn.doordash.com/media/photos/720a7fe3-5b4c-4802-ac8c-b4a1332ab95a-retina-large.jpg)
 
 
 Thai Mr. President | Rowland Heights, CA | Thai
