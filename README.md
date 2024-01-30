@@ -11,8 +11,8 @@
 
 ### Page paths
 | **METHOD** | **PATH** | **PURPOSE** |
-| :---: | :---: | :---: | 
-| | | :--- |
+| :---: | :---: | :---: 
+                  :---  |
 | _GET_ | / | home page |
 | _GET_ | /places | places index/home page |
 | _POST_ | /places | create new place |
