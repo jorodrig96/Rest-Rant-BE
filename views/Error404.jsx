@@ -1,7 +1,7 @@
 const React = require('react')
 import Default from './Default'
 
-export default function error404 () {
+export default function Error404 () {
     return (
       <Default>
           <main>

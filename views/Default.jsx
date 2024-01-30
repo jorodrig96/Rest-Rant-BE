@@ -4,7 +4,7 @@ export default function Default(html) {
     return (
         <html>
             <head>
-                <title>Default Title</title>
+                <title>Rest-Rant BE App</title>
             </head>
             <body>
                 {html.children}

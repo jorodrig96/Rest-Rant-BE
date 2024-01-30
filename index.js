@@ -6,6 +6,7 @@ require('dotenv').config();
 const placesRouter = require("./controllers/places")
 
 //Middleware
+app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
