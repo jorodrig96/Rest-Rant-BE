@@ -9,6 +9,7 @@
 ### Contributers :test_tube:
 - Jose Rodriguez :man_scientist:
 
+### Page paths
 | **METHOD** | **PATH** | **PURPOSE** |
 | :---: | :---: | :--- | 
 | _GET_ | / | home page |
