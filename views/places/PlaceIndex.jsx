@@ -17,6 +17,9 @@ export default function PlaceIndex (data) {
       <Default>
           <main>
               <h1>PLACES INDEX PAGE</h1>
+              <a href='/'>
+                    <button className='btn-primary'> return home</button>
+                </a>
               {placesFormatted}
           </main>
       </Default>
