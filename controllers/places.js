@@ -27,6 +27,11 @@ placesRouter.get('/', (req, res) => {
 
     res.render('places/PlaceIndex', { places })
   })
+
+//Add a new place route 
+placesRouter.get('/new', (req, res) => {
+    res.render('places/AddNew')
+})
   
 
 module.exports = placesRouter;
