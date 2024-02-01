@@ -17,7 +17,7 @@ placesRouter.post('/', (req, res) => {
     console.log(req.body)
     if (!req.body.pic) {
       // Default image if one is not provided
-      req.body.pic = 'http://placekitten.com/400/400'
+      req.body.pic = 'https://us.123rf.com/450wm/stockgiu/stockgiu2204/stockgiu220400316/184268732-fast-food-icons.jpg?ver=6'
     }
     places.push(req.body)
     res.redirect('/places')
