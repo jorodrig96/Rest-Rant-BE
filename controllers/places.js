@@ -1,30 +1,10 @@
 const express = require('express')
 const placesRouter = express.Router()
+const places = require('../models/places')
 
 
 // GET /places
 placesRouter.get('/', (req, res) => {
-    const places = [{ 
-        name: 'Daves Hot Chicken', 
-        city: 'Log Angeles', 
-        state: 'CA', 
-        cuisines: 'American, Fried Chicken', 
-        pic: '/images/daveshotchicken.jpg' 
-    }, { 
-        name: 'Crazy Rockin Sushi', 
-        city: 'La Puente', 
-        state: 'CA', 
-        cuisines: 'Japanese, Sushi', 
-        pic: '/images/crazyrockinsushi.jpeg' 
-    }, {
-        name: 'Thai Mr. President', 
-        city: 'Rowland Heights', 
-        state: 'CA', 
-        cuisines: 'Thai, Mix', 
-        pic: '/images/presidentthai.jpeg' 
-        
-    }]
-
     res.render('places/PlaceIndex', { places })
   })
 
@@ -32,6 +12,16 @@ placesRouter.get('/', (req, res) => {
 placesRouter.get('/new', (req, res) => {
     res.render('places/AddNew')
 })
+
+placesRouter.post('/', (req, res) => {
+    console.log(req.body)
+    if (!req.body.pic) {
+      // Default image if one is not provided
+      req.body.pic = 'http://placekitten.com/400/400'
+    }
+    places.push(req.body)
+    res.redirect('/places')
+  })
   
 
 module.exports = placesRouter;

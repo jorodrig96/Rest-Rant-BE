@@ -17,9 +17,16 @@ export default function PlaceIndex (data) {
       <Default>
           <main>
               <h1>Places to Rant About</h1>
-              <a href='/'>
-                    <button className='btn-primary'> return home</button>
+              <div className='placeIndexNav'>
+              <a href='/places/new'>
+                    <button className='btn-primary'> Add Restaraunt</button>
                 </a>
+                </div>
+                <div className='placeIndexNav'>
+                <a href='/'>
+                    <button className='btn-primary'> Return home</button>
+                </a>
+              </div>
               <div className='row'>
               {placesFormatted}
               </div>

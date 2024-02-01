@@ -26,3 +26,25 @@ h5{
     margin-top: 10px;
     text-align: center;
 }
+
+.formGroup{
+    text-align: left;
+}
+
+.inputGroup {
+    border-radius: 5px;
+    width: 50%;
+    display: block;
+    text-align: center;
+}
+
+.inputButton {
+    margin-top: 30px;
+}
+
+.placeIndexNav {
+    justify-content: center;
+    margin: 5px;
+    padding-left: 5px;
+    display: flex;
+}
