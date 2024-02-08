@@ -6,6 +6,11 @@ export default function AddNew(){
         <Default>
             <main>
                 <h1>Add new place</h1>
+                <div className='placeIndexNav'>
+              <a href='/places'>
+                    <button className='btn-primary'> Return to Places</button>
+                </a>
+                </div>
                 <form method='POST' action='/places'>
                     <div className='formGroup'>
                         <label htmlFor='name'>Restaraunt Name:</label>
