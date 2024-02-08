@@ -2,10 +2,12 @@ const React = require('react')
 import Default from '../Default'
 
 export default function PlaceIndex (data) {
-    const placesFormatted = data.places.map((place) => {
+    const placesFormatted = data.places.map((place, index) => {
       return (
         <div className='col-sm-6'>
-            <h2 className='text-center'>{place.name}</h2>
+            <h2 className='text-center'>
+              <a href={`/places/${index}`}>{place.name}</a>
+            </h2>
             <h2 className='text-center'>{place.city},{place.state}</h2>
             <h3 className='text-center'>{place.cuisines}</h3>
             <img src= {place.pic} alt= {place.name} /> 

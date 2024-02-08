@@ -13,6 +13,20 @@ placesRouter.get('/new', (req, res) => {
     res.render('places/AddNew')
 })
 
+placesRouter.get('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else{
+  res.render('places/Show', { place: places[id] })
+  }
+})
+
+
 placesRouter.post('/', (req, res) => {
     console.log(req.body)
     if (!req.body.pic) {
