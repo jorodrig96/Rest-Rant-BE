@@ -26,6 +26,33 @@ placesRouter.get('/:id', (req, res) => {
   }
 })
 
+placesRouter.get('/:id/edit', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  } 
+  else {
+    res.render('places/Edit', { place: places[id], id })
+  }
+})
+
+placesRouter.put('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    res.send('stub put for now')
+  }
+})
+
+//delete
 placesRouter.delete('/:id', (req, res) => {
   let id = Number(req.params.id)
   if (isNaN(id)) {
@@ -39,7 +66,6 @@ placesRouter.delete('/:id', (req, res) => {
     res.redirect('/places')
   }
 })
-
 
 
 placesRouter.post('/', (req, res) => {
