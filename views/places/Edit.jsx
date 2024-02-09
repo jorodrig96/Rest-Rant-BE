@@ -8,7 +8,7 @@ export default function Edit({ place, id }){
                 <form method="POST" action={`/places/${id}?_method=PUT`}>
                     <div className="row">
                         <div className="form-group col-sm-6">
-                        <label htmlFor="name">Place Name"</label>
+                        <label htmlFor="name">Place Name:</label>
                         <input  className="form-control" 
                                 id="name" 
                                 name="name" 
@@ -18,34 +18,34 @@ export default function Edit({ place, id }){
                     <div className="form-group col-sm-6">
                         <label htmlFor="name">Place City:</label>
                         <input  className="form-control" 
-                                id="name" 
-                                name="name" 
+                                id="city" 
+                                name="city" 
                                 value={place.city} 
-                                required />
+                                />
                     </div>
                     <div className="form-group col-sm-6">
                         <label htmlFor="name">Place State:</label>
                         <input  className="form-control" 
-                                id="name" 
-                                name="name" 
+                                id="state" 
+                                name="state" 
                                 value={place.state} 
-                                required />
+                                />
                     </div>
                     <div className="form-group col-sm-6">
                         <label htmlFor="name">Cuisine:</label>
                         <input  className="form-control" 
-                                id="name" 
-                                name="name" 
+                                id="cuisines" 
+                                name="cuisines" 
                                 value={place.cuisines} 
                                 required />
                     </div>
                     <div className="form-group col-sm-6">
                         <label htmlFor="name">Place Picture:</label>
                         <input  className="form-control" 
-                                id="name" 
-                                name="name" 
+                                id="pic" 
+                                name="pic" 
                                 value={place.pic} 
-                                required />
+                                />
                     </div>
                     <div>
                     <input type="submit" value='Edit'/>

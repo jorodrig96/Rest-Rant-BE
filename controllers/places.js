@@ -48,7 +48,18 @@ placesRouter.put('/:id', (req, res) => {
     res.render('error404')
   }
   else {
-    res.send('stub put for now')
+    if (!req.body.pic){
+      req.body.pic = 'https://cdn1.iconfinder.com/data/icons/restaurants-and-food/103/taco-512.png'
+    }
+    if (!req.body.city){
+      req.body.city = 'Anytown!'
+    }
+    if (!req.body.state){
+      req.body.state = 'Any state!'
+    }
+    //saves new data into places[id]
+    places[id] = req.body;
+    res.redirect(`/places/${id}`);
   }
 })
 
