@@ -61,6 +61,10 @@ export default function AddNew(){
                                 id='pic'
                         />
                     </div>
+                    <div className="formGroup">
+                        <label for="founded">Founded Year</label>
+                        <input className="inputGroup" id="founded" name="founded" />
+                    </div>
                     <input className='inputButton' type='submit' value='Add Place'/>
                 </form>
             </main>

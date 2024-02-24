@@ -1,93 +1,66 @@
 const express = require('express')
 const placesRouter = express.Router()
 const places = require('../models/places')
+const db = require('../models')
 
 
 // GET /places
 placesRouter.get('/', (req, res) => {
-    res.render('places/PlaceIndex', { places })
+    db.Place.find()
+    .then((places) => {
+      res.render('places/PlaceIndex', { places })
+    }) 
+    .catch(err => {
+      res.render('Error404')
+    })
   })
 
 //Add a new place route 
 placesRouter.get('/new', (req, res) => {
-    res.render('places/AddNew')
+    res.render('places/Addnew')
 })
 
 placesRouter.get('/:id', (req, res) => {
-  let id = Number(req.params.id)
-  if (isNaN(id)) {
-    res.render('error404')
-  }
-  else if (!places[id]) {
-    res.render('error404')
-  }
-  else{
-  res.render('places/Show', { place: places[id], id })
-  }
+  db.Place.findById(req.params.id)
+  .then(place => {
+    res.render('places/Show', { place })
+  })
+  .catch(err => {
+    res.render('Error404')
+  })
 })
 
 placesRouter.get('/:id/edit', (req, res) => {
-  let id = Number(req.params.id)
-  if (isNaN(id)) {
-    res.render('error404')
-  }
-  else if (!places[id]) {
-    res.render('error404')
-  } 
-  else {
-    res.render('places/Edit', { place: places[id], id })
-  }
+  res.send('GET edit form stub')
 })
 
 placesRouter.put('/:id', (req, res) => {
-  let id = Number(req.params.id)
-  if (isNaN(id)) {
-    res.render('error404')
-  }
-  else if (!places[id]) {
-    res.render('error404')
-  }
-  else {
-    if (!req.body.pic){
-      req.body.pic = 'https://cdn1.iconfinder.com/data/icons/restaurants-and-food/103/taco-512.png'
-    }
-    if (!req.body.city){
-      req.body.city = 'Anytown!'
-    }
-    if (!req.body.state){
-      req.body.state = 'Any state!'
-    }
-    //saves new data into places[id]
-    places[id] = req.body;
-    res.redirect(`/places/${id}`);
-  }
+  res.send('PUT /places/:id stub')
 })
 
 //delete
 placesRouter.delete('/:id', (req, res) => {
-  let id = Number(req.params.id)
-  if (isNaN(id)) {
-    res.render('error404')
-  }
-  else if (!places[id]) {
-    res.render('error404')
-  }
-  else {
-    places.splice(id, 1);
-    res.redirect('/places')
-  }
+  res.send('DELETE /places/:id stub')
 })
 
 
 placesRouter.post('/', (req, res) => {
-    console.log(req.body)
-    if (!req.body.pic) {
-      // Default image if one is not provided
-      req.body.pic = 'https://us.123rf.com/450wm/stockgiu/stockgiu2204/stockgiu220400316/184268732-fast-food-icons.jpg?ver=6'
-    }
-    places.push(req.body)
-    res.redirect('/places')
+    db.Place.create(req.body)
+    .then(() => {
+      res.redirect('/places')
+    })
+    .catch(err => {
+      res.render('Error404')
+    })
   })
+
+placesRouter.post('/:id/rant', (req, res) => {
+  res.send('GET /places/:id/rant stub')
+})
+
+placesRouter.delete('/:id/rant/:rantId', (req, res) => {
+  res.send('GET /places/:id/rant/:rantId stub')
+})
   
 
 module.exports = placesRouter;
