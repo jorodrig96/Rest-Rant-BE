@@ -62,7 +62,7 @@ export default function AddNew(){
                         />
                     </div>
                     <div className="formGroup">
-                        <label for="founded">Founded Year</label>
+                        <label htmlFor="founded">Founded Year</label>
                         <input className="inputGroup" id="founded" name="founded" />
                     </div>
                     <input className='inputButton' type='submit' value='Add Place'/>

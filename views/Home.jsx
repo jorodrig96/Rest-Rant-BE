@@ -9,7 +9,7 @@ export default function Home(){
                 <h4>FOODIES, think you can foodie?</h4>
                 <h5>create. <a href='/places'><button className='btn-primary'> here.</button></a></h5>
                 <img src='images/chickensandwich.jpg' alt='chicken sandwich picture'/>
-                <div class className="mention">
+                <div className="mention">
                     Photo by <a href="https://unsplash.com/@eaterscollective?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Eaters Collective</a> on <a href="https://unsplash.com/photos/chicken-burger-on-tray-pLKgCsBOiw4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
   
                 </div>
