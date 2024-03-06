@@ -29,7 +29,6 @@ export default function AddNew(){
                                 id='city'
                                 name='city' 
                                 placeholder="add city"
-                                required
                                   /> 
                     </div>
                     <div className='formGroup'>
@@ -39,7 +38,6 @@ export default function AddNew(){
                                 id='state'
                                 name='state' 
                                 placeholder="add state"
-                                required
                                 /> 
                     </div>
                     <div className='formGroup'>
@@ -63,7 +61,7 @@ export default function AddNew(){
                     </div>
                     <div className="formGroup">
                         <label htmlFor="founded">Founded Year</label>
-                        <input className="inputGroup" id="founded" name="founded" />
+                        <input className="inputGroup" id="founded" name="founded" value={new Date().getFullYear()} />
                     </div>
                     <input className='inputButton' type='submit' value='Add Place'/>
                 </form>

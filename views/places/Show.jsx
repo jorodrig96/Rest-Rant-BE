@@ -12,10 +12,11 @@ export default function Show(data) {
                     </div>
                     <br/>
                     <h5 className="card-title">{data.place.name}</h5>
-                    <h5 className="card-title">{data.place.city},{data.place.state}</h5>
-                    <h5 className="card-title">{data.place.cuisines}</h5>
+                    <h5 className="card-title">{data.place.cuisines} Cuisine</h5>
                     <br/>
                     <p className="card-text"><img src= {data.place.pic}/></p>
+                    <h5 className="card-title">{data.place.showEstablished()}</h5>
+
                     <a href={`/places/${data.id}/edit`} className="btn btn-warning">
                       Edit</a>  
                         <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
