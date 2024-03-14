@@ -22,7 +22,9 @@ placesRouter.get('/new', (req, res) => {
 
 placesRouter.get('/:id', (req, res) => {
   db.Place.findById(req.params.id)
+  .populate('comments')
   .then(place => {
+    console.log(place.comments)
     res.render('places/Show', { place })
   })
   .catch(err => {
