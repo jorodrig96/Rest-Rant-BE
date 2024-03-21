@@ -21,7 +21,7 @@ export default function Show(data) {
           rating = (
             <h3>
               {Math.round(averageRating)} stars
-              {/*math.round allows for the math so be rounded to the nearest whole number */}
+              {/*math.round allows for the math so be rounded to the nearest whole */}
             </h3>
           )
           
@@ -58,7 +58,7 @@ export default function Show(data) {
                     <p className="card-text"><img src= {data.place.pic}/></p>
                     <h5 className="card-title">{data.place.showEstablished()}</h5>
 
-                    <a href={`/places/${data.id}/edit`} className="btn btn-warning">
+                    <a href={`/places/${data.place.id}/edit`} className="btn btn-warning">
                       Edit</a>  
                         <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}> 
                             <button type="submit" className="btn btn-danger">
