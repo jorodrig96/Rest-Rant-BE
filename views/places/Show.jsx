@@ -17,19 +17,16 @@ export default function Show(data) {
         let sumRatings = data.place.comments.reduce((tot, c) => {
             return tot + c.stars
           }, 0)
-          let averageRating = Math.round(sumRatings / data.place.comments.length)
-          let stars = ''
-          for (let i = 0; i < averageRating; i++) {
-            stars += '⭐️'
-          }
+          let averageRating = sumRatings / data.place.comments.length // getting length of a places comments and averaging them out to get a rating
           rating = (
             <h3>
-              {stars} stars
+              {Math.round(averageRating)} stars
+              {/*math.round allows for the math so be rounded to the nearest whole number */}
             </h3>
           )
           
         comments = data.place.comments.map(c => {
-          return (
+      return (
             <div className="border">
               <h2 className="rant">{c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}</h2>
               <h4>{c.content}</h4>
@@ -51,6 +48,7 @@ export default function Show(data) {
                 <div className="card-body">
                 <div className='ratingGroup'>
                     <h5>Rating</h5>
+                    <h5> {rating} </h5>
                     <h5>Not Rated</h5>
                     </div>
                     <br/>
