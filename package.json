@@ -1,7 +1,10 @@
 {
   "name": "rest-rant",
   "version": "1.0.0",
-  "description": "",
+  "engines": {
+    "node": "20.x"
+  },
+  "description": "### Technologies used. (as of now) :hammer_and_wrench: - HTML/CSS :nut_and_bolt: - Node.js :nut_and_bolt: - Express :nut_and_bolt:",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -16,6 +19,7 @@
     "express-react-views": "^0.11.0",
     "method-override": "^3.0.0",
     "mongoose": "^8.2.0",
-    "react": "^16.14.0"
+    "react": "^16.14.0",
+    "react-dom": "^18.2.0"
   }
 }

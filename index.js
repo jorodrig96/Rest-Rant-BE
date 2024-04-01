@@ -5,6 +5,7 @@ const methodOverride = require('method-override')
 
 //Routes
 const placesRouter = require("./controllers/places")
+const mongoose = require('mongoose')
 
 //Middleware
 app.set('views', __dirname + '/views')
@@ -28,3 +29,5 @@ app.get('*', (req, res) => {
 app.listen(process.env.PORT,() => { 
     console.log(`hello, youve been connected to ${process.env.PORT}.`)
 })
+
+module.exports = app;
