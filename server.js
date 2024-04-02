@@ -28,7 +28,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 app.use("/places", placesRouter)
 
 app.get('/', (req, res) => {
-    res.render('Home')
+    res.send('<h1>Hello, welcome to rest rant!</h1>')
 })
 
 app.get('*', (req, res) => {
