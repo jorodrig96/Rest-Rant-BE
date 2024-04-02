@@ -1,6 +1,8 @@
 # Project Rest-Rant-BE
 ## REST-Rant is a fully deployed CRUD app where users can add & eview restaurants.
 
+## https://rest-rant-be.vercel.app/
+
 ### Technologies used. (as of now) :hammer_and_wrench:
 - HTML/CSS :nut_and_bolt:
 - React :nut_and_bolt:
