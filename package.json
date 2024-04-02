@@ -5,9 +5,9 @@
     "node": "20.x"
   },
   "description": "### Technologies used. (as of now) :hammer_and_wrench: - HTML/CSS :nut_and_bolt: - Node.js :nut_and_bolt: - Express :nut_and_bolt:",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,16 +19,8 @@
     "express-react-views": "^0.11.0",
     "method-override": "^3.0.0",
     "mongodb": "^4.4.12",
-    "mongoose": "^8.2.0",
+    "mongoose": "^8.2.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.24.3",
-    "@babel/plugin-proposal-class-properties": "^7.18.6",
-    "@babel/plugin-transform-react-jsx": "^7.23.4",
-    "@babel/plugin-transform-runtime": "^7.24.3",
-    "@babel/preset-env": "^7.24.3",
-    "@babel/preset-react": "^7.24.1"
   }
 }
