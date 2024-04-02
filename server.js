@@ -15,6 +15,15 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+.then(() => {
+    console.log(`connected to mongo server: ${process.env.MONGO_URI}`);
+    // Your code logic here
+  })
+  .catch((error) => {
+    console.error('Error connecting to MongoDB.', error);
+  });
+
 //Routes
 app.use("/places", placesRouter)
 
